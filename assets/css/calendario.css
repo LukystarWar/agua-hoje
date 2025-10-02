@@ -1,0 +1,240 @@
+/* ===========================
+   CALENDÁRIO
+   =========================== */
+
+.calendario-wrapper {
+  min-height: 100vh;
+  padding: var(--spacing-md);
+}
+
+.calendario-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+}
+
+.calendario-header h1 {
+  color: var(--branco);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Navegação de meses */
+.mes-navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.mes-navegacao button {
+  background: var(--branco);
+  color: var(--azul-principal);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.mes-navegacao button:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.mes-navegacao button:active {
+  transform: scale(0.95);
+}
+
+.mes-navegacao button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mes-atual {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--branco);
+}
+
+/* Grid do calendário */
+.calendario-grid {
+  background: var(--branco);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Cabeçalho dos dias da semana */
+.dias-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.dia-semana {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cinza-medio);
+  padding: var(--spacing-xs);
+}
+
+/* Grid de dias do mês */
+.dias-mes {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.dia {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: var(--transition);
+  position: relative;
+  cursor: default;
+}
+
+/* Dia vazio (espaçamento inicial) */
+.dia.vazio {
+  background: transparent;
+  cursor: default;
+}
+
+/* Status dos dias */
+.dia.sim {
+  background: var(--sim-agua);
+  color: var(--branco);
+  box-shadow: var(--shadow-sm);
+}
+
+.dia.nao {
+  background: var(--nao-agua);
+  color: var(--branco);
+  box-shadow: var(--shadow-sm);
+}
+
+.dia.pausa {
+  background: var(--pausa);
+  color: var(--texto);
+  box-shadow: var(--shadow-sm);
+}
+
+.dia.indefinido {
+  background: var(--cinza-claro);
+  color: var(--cinza-medio);
+}
+
+/* Dia atual destacado */
+.dia.hoje {
+  border: 3px solid var(--branco);
+  box-shadow: 0 0 0 4px var(--azul-principal);
+  font-weight: 900;
+}
+
+/* Hover effect */
+.dia.sim:hover,
+.dia.nao:hover,
+.dia.pausa:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+/* Legenda */
+.legenda {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.legenda h3 {
+  color: var(--branco);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.legenda-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--branco);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.legenda-cor {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.legenda-cor.sim {
+  background: var(--sim-agua);
+}
+
+.legenda-cor.nao {
+  background: var(--nao-agua);
+}
+
+.legenda-cor.pausa {
+  background: var(--pausa);
+}
+
+.legenda-cor.indefinido {
+  background: var(--cinza-claro);
+}
+
+/* Botões de navegação */
+.calendario-nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+  .calendario-nav-buttons {
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+
+  .dia {
+    font-size: 1rem;
+  }
+
+  .dia-semana {
+    font-size: 1rem;
+  }
+}
+
+/* Loading */
+.calendario-loading {
+  text-align: center;
+  color: var(--branco);
+  padding: var(--spacing-xl);
+}

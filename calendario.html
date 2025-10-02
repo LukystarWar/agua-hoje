@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calendário de fornecimento de água">
+  <meta name="theme-color" content="#007BFF">
+
+  <title>Calendário - Gotinha</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/calendario.css">
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="calendario-wrapper">
+    <div class="container">
+      <!-- Header -->
+      <div class="calendario-header fade-in">
+        <h1>📅 Calendário</h1>
+      </div>
+
+      <!-- Navegação de meses -->
+      <div class="mes-navegacao fade-in">
+        <button id="btnMesAnterior" aria-label="Mês anterior">◀</button>
+        <span class="mes-atual" id="mesNome">Carregando...</span>
+        <button id="btnProximoMes" aria-label="Próximo mês">▶</button>
+      </div>
+
+      <!-- Grid do calendário -->
+      <div class="calendario-grid fade-in" id="calendarioContainer">
+        <div class="calendario-loading">
+          <div class="loading-spinner"></div>
+          <p>Carregando calendário...</p>
+        </div>
+      </div>
+
+      <!-- Legenda -->
+      <div class="legenda fade-in">
+        <h3>Legenda:</h3>
+        <div class="legenda-items">
+          <div class="legenda-item">
+            <div class="legenda-cor sim"></div>
+            <span>Tem água</span>
+          </div>
+          <div class="legenda-item">
+            <div class="legenda-cor nao"></div>
+            <span>Sem água</span>
+          </div>
+          <div class="legenda-item">
+            <div class="legenda-cor pausa"></div>
+            <span>Pausa/Manutenção</span>
+          </div>
+          <div class="legenda-item">
+            <div class="legenda-cor indefinido"></div>
+            <span>Previsto (calculado)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões de navegação -->
+      <div class="calendario-nav-buttons fade-in">
+        <a href="index.html" class="btn btn-outline btn-lg btn-block">
+          ← Voltar
+        </a>
+        <a href="ajustar.html" class="btn btn-warning btn-lg btn-block">
+          ⚙️ Ajustar Ciclo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/calendario.js"></script>
+</body>
+</html>

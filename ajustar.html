@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ajustar ciclo de fornecimento de água">
+  <meta name="theme-color" content="#007BFF">
+
+  <title>Ajustar Ciclo - Gotinha</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/ajustar.css">
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="ajustar-wrapper">
+    <div class="container">
+      <!-- Header -->
+      <div class="ajustar-header fade-in">
+        <h1>⚙️ Ajustar Ciclo</h1>
+        <p>Registre manualmente o fornecimento de hoje</p>
+      </div>
+
+      <!-- Feedback container -->
+      <div id="feedbackContainer"></div>
+
+      <!-- Card de ajuste -->
+      <div class="ajustar-card fade-in">
+        <!-- Data de hoje -->
+        <div class="data-ajuste">
+          <h2>Hoje</h2>
+          <p id="dataHoje"></p>
+        </div>
+
+        <!-- Botões de ajuste -->
+        <div class="botoes-ajuste">
+          <button id="btnTevAgua" class="btn btn-success btn-lg btn-block">
+            <span class="btn-emoji">💧</span>
+            <span>Hoje teve água</span>
+          </button>
+
+          <button id="btnNaoTevAgua" class="btn btn-danger btn-lg btn-block">
+            <span class="btn-emoji">❌</span>
+            <span>Hoje não teve água</span>
+          </button>
+
+          <button id="btnPausa" class="btn btn-warning btn-lg btn-block">
+            <span class="btn-emoji">⚠️</span>
+            <span>Registrar pausa/manutenção</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Histórico -->
+      <div class="historico-section fade-in">
+        <h3>📋 Últimos registros manuais</h3>
+        <div class="historico-lista" id="historicoLista">
+          <div class="historico-vazio">
+            Carregando...
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões de navegação -->
+      <div class="ajustar-nav-buttons fade-in">
+        <a href="index.html" class="btn btn-outline btn-lg btn-block">
+          ← Voltar
+        </a>
+        <a href="calendario.html" class="btn btn-outline btn-lg btn-block">
+          📆 Ver Calendário
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/ajustar.js"></script>
+
+  <script>
+    // Atualizar data de hoje no header
+    document.addEventListener('DOMContentLoaded', () => {
+      const hoje = new Date();
+      document.getElementById('dataHoje').textContent = window.utils.formatarDataLegivel(hoje);
+    });
+  </script>
+</body>
+</html>

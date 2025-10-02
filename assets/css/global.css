@@ -1,0 +1,289 @@
+/* ===========================
+   RESET & BASE
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores principais */
+  --azul-principal: #007BFF;
+  --branco: #FFFFFF;
+  --texto: #212529;
+
+  /* Status */
+  --sim-agua: #28a745;
+  --nao-agua: #dc3545;
+  --pausa: #ffc107;
+
+  /* Tons de cinza */
+  --cinza-claro: #f8f9fa;
+  --cinza-medio: #6c757d;
+  --cinza-escuro: #343a40;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+
+  /* Espaçamento */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Transições */
+  --transition: all 0.3s ease;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--texto);
+  background: linear-gradient(135deg, var(--azul-principal) 0%, #0056b3 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ===========================
+   TIPOGRAFIA
+   =========================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ===========================
+   LAYOUT CONTAINER
+   =========================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+/* Mobile-first: container menor */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-sm);
+  }
+}
+
+/* ===========================
+   BOTÕES
+   =========================== */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 44px; /* Área de toque mínima */
+  min-width: 44px;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--azul-principal);
+  color: var(--branco);
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-success {
+  background: var(--sim-agua);
+  color: var(--branco);
+}
+
+.btn-success:hover {
+  background: #218838;
+}
+
+.btn-danger {
+  background: var(--nao-agua);
+  color: var(--branco);
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+.btn-warning {
+  background: var(--pausa);
+  color: var(--texto);
+}
+
+.btn-warning:hover {
+  background: #e0a800;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--branco);
+  border: 2px solid var(--branco);
+}
+
+.btn-outline:hover {
+  background: var(--branco);
+  color: var(--azul-principal);
+}
+
+.btn-lg {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 1.25rem;
+  min-height: 56px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* ===========================
+   CARDS
+   =========================== */
+.card {
+  background: var(--branco);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* ===========================
+   UTILITÁRIOS
+   =========================== */
+.text-center {
+  text-align: center;
+}
+
+.mb-sm {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mt-sm {
+  margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+  margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
+
+/* ===========================
+   ANIMAÇÕES
+   =========================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+@media (min-width: 768px) {
+  .container {
+    padding: var(--spacing-lg);
+  }
+
+  .btn {
+    font-size: 1.125rem;
+  }
+}
+
+/* ===========================
+   ACESSIBILIDADE
+   =========================== */
+:focus-visible {
+  outline: 3px solid var(--pausa);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
