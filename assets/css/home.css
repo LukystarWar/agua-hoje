@@ -11,6 +11,8 @@
   padding: var(--spacing-sm);
   background: var(--branco);
   gap: var(--spacing-md);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .home-content {
