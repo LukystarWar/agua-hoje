@@ -79,10 +79,10 @@ function renderizarStatus(container, info) {
     </div>
 
     <div class="nav-buttons fade-in">
-      <a href="calendario.html" class="btn btn-primary btn-lg">
+      <a href="calendario.html" class="btn btn-outline btn-lg">
         Ver Calendário
       </a>
-      <a href="ajustar.html" class="btn btn-outline btn-lg">
+      <a href="ajustar.html" class="btn btn-primary btn-lg">
         Ajustar Ciclo
       </a>
     </div>

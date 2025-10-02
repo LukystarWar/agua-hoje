@@ -3,21 +3,27 @@
    =========================== */
 
 .calendario-wrapper {
-  min-height: 100vh;
-  padding: var(--spacing-md);
+  min-height: calc(100vh - 100px);
+  padding: var(--spacing-sm);
   background: var(--branco);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .calendario-header {
   text-align: center;
-  margin-bottom: var(--spacing-lg);
-  padding-top: var(--spacing-md);
+  margin: 0;
+  padding: var(--spacing-sm) 0;
+  background: var(--cinza-claro);
+  box-shadow: var(--shadow-sm);
 }
 
 .calendario-header h2 {
   color: var(--texto);
-  margin-bottom: var(--spacing-sm);
+  margin: 0;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 /* Navegação de meses */
@@ -27,8 +33,7 @@
   align-items: center;
   background: var(--cinza-claro);
   padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--spacing-lg);
+  margin: 0;
   box-shadow: var(--shadow-sm);
 }
 
@@ -69,10 +74,10 @@
 /* Grid do calendário */
 .calendario-grid {
   background: var(--cinza-claro);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
   box-shadow: var(--shadow-sm);
-  margin-bottom: var(--spacing-lg);
+  margin: 0;
+  flex: 1;
 }
 
 /* Cabeçalho dos dias da semana */
@@ -119,20 +124,21 @@
 
 /* Status dos dias */
 .dia.sim {
-  background: var(--sim-agua);
+  background: var(--azul-principal);
   color: var(--branco);
   box-shadow: var(--shadow-sm);
 }
 
 .dia.nao {
-  background: var(--nao-agua);
-  color: var(--branco);
+  background: var(--branco);
+  color: var(--texto);
+  border: 2px solid var(--cinza-claro);
   box-shadow: var(--shadow-sm);
 }
 
 .dia.pausa {
-  background: var(--pausa);
-  color: var(--texto);
+  background: var(--cinza-medio);
+  color: var(--branco);
   box-shadow: var(--shadow-sm);
 }
 
@@ -160,22 +166,23 @@
 /* Legenda */
 .legenda {
   background: var(--cinza-claro);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-sm);
+  margin: 0;
   box-shadow: var(--shadow-sm);
+  text-align: center;
 }
 
 .legenda h3 {
   color: var(--texto);
-  font-size: 1rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-xs);
 }
 
 .legenda-items {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
+  justify-content: center;
 }
 
 .legenda-item {
@@ -195,15 +202,16 @@
 }
 
 .legenda-cor.sim {
-  background: var(--sim-agua);
+  background: var(--azul-principal);
 }
 
 .legenda-cor.nao {
-  background: var(--nao-agua);
+  background: var(--branco);
+  border: 2px solid var(--cinza-claro);
 }
 
 .legenda-cor.pausa {
-  background: var(--pausa);
+  background: var(--cinza-medio);
 }
 
 .legenda-cor.indefinido {
@@ -213,16 +221,20 @@
 /* Botões de navegação */
 .calendario-nav-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: var(--spacing-sm);
+  margin: 0;
+  padding: var(--spacing-md) 0 0 0;
+}
+
+.calendario-nav-buttons .btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
-  .calendario-nav-buttons {
-    flex-direction: row;
-    gap: var(--spacing-md);
-  }
-
   .dia {
     font-size: 1rem;
   }
