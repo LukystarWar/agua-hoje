@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   padding: var(--spacing-md);
+  background: var(--branco);
 }
 
 /* Status principal (SIM/NÃO/PAUSA) */
@@ -40,18 +41,17 @@
 
 .status-mensagem {
   font-size: clamp(1.25rem, 4vw, 1.75rem);
-  color: var(--branco);
+  color: var(--texto);
   font-weight: 600;
   margin-bottom: var(--spacing-md);
 }
 
 /* Data atual */
 .data-atual {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background: var(--cinza-claro);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-lg);
-  color: var(--branco);
+  color: var(--texto);
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: var(--spacing-lg);
@@ -60,26 +60,25 @@
 
 /* Ícone da gotinha */
 .icone-gotinha {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: auto;
   margin: 0 auto var(--spacing-lg);
   display: block;
 }
 
 @media (min-width: 768px) {
   .icone-gotinha {
-    width: 200px;
-    height: 200px;
+    width: 300px;
   }
 }
 
 /* Card com próximo fornecimento */
 .proximo-fornecimento {
-  background: var(--branco);
+  background: var(--cinza-claro);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   max-width: 400px;
   width: 100%;
 }
@@ -121,15 +120,15 @@
 /* Loading state */
 .loading {
   text-align: center;
-  color: var(--branco);
+  color: var(--texto);
   padding: var(--spacing-xl);
 }
 
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top-color: var(--branco);
+  border: 4px solid var(--cinza-claro);
+  border-top-color: var(--azul-principal);
   border-radius: 50%;
   margin: 0 auto var(--spacing-md);
   animation: spin 1s linear infinite;
@@ -143,7 +142,7 @@
 
 /* Error state */
 .error-message {
-  background: rgba(220, 53, 69, 0.9);
+  background: #dc3545;
   color: var(--branco);
   padding: var(--spacing-md);
   border-radius: var(--radius-md);

@@ -5,6 +5,7 @@
 .calendario-wrapper {
   min-height: 100vh;
   padding: var(--spacing-md);
+  background: var(--branco);
 }
 
 .calendario-header {
@@ -13,9 +14,10 @@
   padding-top: var(--spacing-md);
 }
 
-.calendario-header h1 {
-  color: var(--branco);
+.calendario-header h2 {
+  color: var(--texto);
   margin-bottom: var(--spacing-sm);
+  font-size: 1.5rem;
 }
 
 /* Navegação de meses */
@@ -23,8 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background: var(--cinza-claro);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-lg);
@@ -32,8 +33,8 @@
 }
 
 .mes-navegacao button {
-  background: var(--branco);
-  color: var(--azul-principal);
+  background: var(--azul-principal);
+  color: var(--branco);
   border: none;
   width: 44px;
   height: 44px;
@@ -62,15 +63,15 @@
 .mes-atual {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--branco);
+  color: var(--texto);
 }
 
 /* Grid do calendário */
 .calendario-grid {
-  background: var(--branco);
+  background: var(--cinza-claro);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
   margin-bottom: var(--spacing-lg);
 }
 
@@ -158,8 +159,7 @@
 
 /* Legenda */
 .legenda {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background: var(--cinza-claro);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
@@ -167,7 +167,7 @@
 }
 
 .legenda h3 {
-  color: var(--branco);
+  color: var(--texto);
   font-size: 1rem;
   margin-bottom: var(--spacing-sm);
 }
@@ -182,7 +182,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--branco);
+  color: var(--texto);
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -235,6 +235,6 @@
 /* Loading */
 .calendario-loading {
   text-align: center;
-  color: var(--branco);
+  color: var(--texto);
   padding: var(--spacing-xl);
 }

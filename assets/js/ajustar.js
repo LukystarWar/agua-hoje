@@ -128,9 +128,9 @@ function getStatusTexto(status) {
  */
 function mostrarSucesso(container, status) {
   const mensagens = {
-    'SIM': '✅ Registrado: Hoje TEM água!',
-    'NAO': '❌ Registrado: Hoje NÃO tem água',
-    'PAUSA': '⚠️ Registrado: Fornecimento em PAUSA'
+    'SIM': 'Registrado: Hoje TEM água',
+    'NAO': 'Registrado: Hoje NÃO tem água',
+    'PAUSA': 'Registrado: Fornecimento em PAUSA'
   };
 
   container.innerHTML = `
@@ -146,7 +146,7 @@ function mostrarSucesso(container, status) {
 function mostrarErro(container) {
   container.innerHTML = `
     <div class="error-message">
-      <p>⚠️ Erro ao salvar. Tente novamente.</p>
+      <p>Erro ao salvar. Tente novamente.</p>
     </div>
   `;
 

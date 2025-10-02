@@ -232,9 +232,9 @@ async function verificarStatusHoje(registroHoje, ultimoRegistro) {
 
   // Mensagens
   const mensagens = {
-    'SIM': 'Hoje TEM água! 💧',
-    'NAO': 'Hoje NÃO tem água 😔',
-    'PAUSA': 'Fornecimento em pausa ⚠️'
+    'SIM': 'Hoje TEM água',
+    'NAO': 'Hoje NÃO tem água',
+    'PAUSA': 'Fornecimento em pausa'
   };
 
   // Calcular próxima data com água

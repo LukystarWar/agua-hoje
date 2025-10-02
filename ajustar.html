@@ -16,11 +16,16 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
+  <!-- Header -->
+  <header class="app-header">
+    <h1>Água Hoje?</h1>
+  </header>
+
   <div class="ajustar-wrapper">
     <div class="container">
-      <!-- Header -->
+      <!-- Subtítulo -->
       <div class="ajustar-header fade-in">
-        <h1>⚙️ Ajustar Ciclo</h1>
+        <h2>Ajustar Ciclo</h2>
         <p>Registre manualmente o fornecimento de hoje</p>
       </div>
 
@@ -31,32 +36,29 @@
       <div class="ajustar-card fade-in">
         <!-- Data de hoje -->
         <div class="data-ajuste">
-          <h2>Hoje</h2>
+          <h3>Hoje</h3>
           <p id="dataHoje"></p>
         </div>
 
         <!-- Botões de ajuste -->
         <div class="botoes-ajuste">
-          <button id="btnTevAgua" class="btn btn-success btn-lg btn-block">
-            <span class="btn-emoji">💧</span>
-            <span>Hoje teve água</span>
+          <button id="btnTevAgua" class="btn btn-primary btn-lg btn-block">
+            Hoje teve água
           </button>
 
-          <button id="btnNaoTevAgua" class="btn btn-danger btn-lg btn-block">
-            <span class="btn-emoji">❌</span>
-            <span>Hoje não teve água</span>
+          <button id="btnNaoTevAgua" class="btn btn-outline btn-lg btn-block">
+            Hoje NÃO teve água
           </button>
 
-          <button id="btnPausa" class="btn btn-warning btn-lg btn-block">
-            <span class="btn-emoji">⚠️</span>
-            <span>Registrar pausa/manutenção</span>
+          <button id="btnPausa" class="btn btn-outline btn-lg btn-block">
+            Registrar pausa/manutenção
           </button>
         </div>
       </div>
 
       <!-- Histórico -->
       <div class="historico-section fade-in">
-        <h3>📋 Últimos registros manuais</h3>
+        <h3>Últimos registros manuais</h3>
         <div class="historico-lista" id="historicoLista">
           <div class="historico-vazio">
             Carregando...
@@ -67,10 +69,10 @@
       <!-- Botões de navegação -->
       <div class="ajustar-nav-buttons fade-in">
         <a href="index.html" class="btn btn-outline btn-lg btn-block">
-          ← Voltar
+          Voltar
         </a>
         <a href="calendario.html" class="btn btn-outline btn-lg btn-block">
-          📆 Ver Calendário
+          Ver Calendário
         </a>
       </div>
     </div>

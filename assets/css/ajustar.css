@@ -5,6 +5,7 @@
 .ajustar-wrapper {
   min-height: 100vh;
   padding: var(--spacing-md);
+  background: var(--branco);
 }
 
 .ajustar-header {
@@ -13,22 +14,23 @@
   padding-top: var(--spacing-md);
 }
 
-.ajustar-header h1 {
-  color: var(--branco);
+.ajustar-header h2 {
+  color: var(--texto);
   margin-bottom: var(--spacing-sm);
+  font-size: 1.5rem;
 }
 
 .ajustar-header p {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--cinza-medio);
   font-size: 1rem;
 }
 
 /* Card de ajuste */
 .ajustar-card {
-  background: var(--branco);
+  background: var(--cinza-claro);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
   margin-bottom: var(--spacing-lg);
 }
 
@@ -40,7 +42,7 @@
   border-radius: var(--radius-md);
 }
 
-.data-ajuste h2 {
+.data-ajuste h3 {
   font-size: 1.25rem;
   color: var(--texto);
   margin-bottom: var(--spacing-xs);
@@ -61,23 +63,14 @@
 }
 
 .botoes-ajuste .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
   font-size: 1.125rem;
   padding: var(--spacing-md) var(--spacing-lg);
   min-height: 60px;
 }
 
-.btn-emoji {
-  font-size: 1.5rem;
-}
-
 /* Histórico */
 .historico-section {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background: var(--cinza-claro);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
@@ -85,7 +78,7 @@
 }
 
 .historico-section h3 {
-  color: var(--branco);
+  color: var(--texto);
   font-size: 1.125rem;
   margin-bottom: var(--spacing-md);
 }
@@ -97,13 +90,13 @@
 }
 
 .historico-item {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--branco);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-sm);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--branco);
+  color: var(--texto);
   font-size: 0.875rem;
   font-weight: 600;
 }

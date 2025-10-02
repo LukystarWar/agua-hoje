@@ -45,19 +45,21 @@ function renderizarStatus(container, info) {
 
   // Definir classe e ícone baseado no status
   const statusClass = status.toLowerCase();
-  const iconeSrc = status === 'SIM' ? 'assets/img/gotinha-sim.svg' : 'assets/img/gotinha-nao.svg';
+  let iconeSrc = 'assets/img/base.png';
+  if (status === 'SIM') iconeSrc = 'assets/img/sim.png';
+  else if (status === 'NAO') iconeSrc = 'assets/img/nao.png';
+  else if (status === 'PAUSA') iconeSrc = 'assets/img/manutencao.png';
 
   container.innerHTML = `
     <div class="status-principal fade-in">
       <img
         src="${iconeSrc}"
-        alt="Gotinha ${status === 'SIM' ? 'feliz' : 'triste'}"
+        alt="Status ${status}"
         class="icone-gotinha pulse"
         onerror="this.style.display='none'"
       />
 
       <h1 class="status-texto ${statusClass}">${status}</h1>
-      <p class="status-mensagem">${mensagem}</p>
 
       <div class="data-atual">
         ${dataLegivel}
@@ -66,17 +68,17 @@ function renderizarStatus(container, info) {
 
     ${status !== 'SIM' ? `
       <div class="proximo-fornecimento fade-in">
-        <h3>📅 Próximo fornecimento:</h3>
+        <h3>Próximo fornecimento:</h3>
         <p class="data-proxima">${proxima}</p>
       </div>
     ` : ''}
 
     <div class="nav-buttons fade-in">
       <a href="calendario.html" class="btn btn-outline btn-lg btn-block">
-        📆 Ver Calendário
+        Ver Calendário
       </a>
-      <a href="ajustar.html" class="btn btn-warning btn-lg btn-block">
-        ⚙️ Ajustar Ciclo
+      <a href="ajustar.html" class="btn btn-primary btn-lg btn-block">
+        Ajustar Ciclo
       </a>
     </div>
   `;
@@ -100,14 +102,14 @@ function mostrarLoading(container) {
 function mostrarErro(container, mensagem) {
   container.innerHTML = `
     <div class="error-message">
-      <p>⚠️ ${mensagem}</p>
+      <p>${mensagem}</p>
     </div>
     <div class="nav-buttons">
       <button class="btn btn-outline btn-lg btn-block" onclick="location.reload()">
-        🔄 Tentar Novamente
+        Tentar Novamente
       </button>
-      <a href="ajustar.html" class="btn btn-warning btn-lg btn-block">
-        ⚙️ Ajustar Manualmente
+      <a href="ajustar.html" class="btn btn-primary btn-lg btn-block">
+        Ajustar Manualmente
       </a>
     </div>
   `;
