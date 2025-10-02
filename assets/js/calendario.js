@@ -48,10 +48,10 @@ async function carregarCalendario() {
     mostrarLoading(container);
 
     // Buscar registros do mês no banco
-    const registrosBanco = await window.gotinha.buscarMes(mesAtual, anoAtual);
+    const registrosBanco = await window.aguaHoje.buscarMes(mesAtual, anoAtual);
 
     // Buscar último registro para calcular ciclo
-    const ultimoRegistro = await window.gotinha.buscarUltimoRegistro();
+    const ultimoRegistro = await window.aguaHoje.buscarUltimoRegistro();
 
     // Gerar calendário
     const calendario = window.utils.gerarCalendarioMes(mesAtual, anoAtual, registrosBanco, ultimoRegistro);

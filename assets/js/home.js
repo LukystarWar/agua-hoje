@@ -17,11 +17,11 @@ async function carregarStatusHoje() {
     mostrarLoading(statusContainer);
 
     // Buscar último registro para calcular ciclo
-    const ultimoRegistro = await window.gotinha.buscarUltimoRegistro();
+    const ultimoRegistro = await window.aguaHoje.buscarUltimoRegistro();
 
     // Buscar status de hoje
     const hoje = window.utils.obterDataHoje();
-    const registroHoje = await window.gotinha.buscarStatus(hoje);
+    const registroHoje = await window.aguaHoje.buscarStatus(hoje);
 
     // Verificar status
     const info = await window.utils.verificarStatusHoje(registroHoje, ultimoRegistro);

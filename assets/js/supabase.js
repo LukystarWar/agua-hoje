@@ -195,7 +195,7 @@ function formatarData(data) {
 }
 
 // Exportar funções globalmente para uso em outras páginas
-window.gotinha = {
+window.aguaHoje = {
   buscarStatus,
   salvarStatus,
   buscarHistorico,

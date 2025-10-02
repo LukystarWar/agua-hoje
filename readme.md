@@ -1,4 +1,4 @@
-# 💧 Gotinha - Web App de Ciclo de Água
+# 💧 Água Hoje? - Web App de Ciclo de Água
 
 Web app mobile-first para rastrear ciclo de fornecimento de água alternado (1 dia SIM → 1 dia NÃO), com suporte a pausas por manutenção/quebra de fornecimento.
 
@@ -31,29 +31,31 @@ Sistema simples e objetivo para saber se **hoje é dia de água ou não**, com c
 ## 🏗️ Estrutura de Arquivos
 
 ```
-/gotinha
+/agua-hoje
   index.html              → Tela principal (SIM/NÃO de hoje)
   calendario.html         → Grid de dias do mês
   ajustar.html           → Registrar status ou pausas
 
-  /css
-    global.css           → Reset, variáveis CSS, mobile-first base
-    home.css             → Estilos da tela principal
-    calendario.css       → Grid + estilos do calendário
-    ajustar.css          → Formulário de ajuste
+  /assets
+    /css
+      global.css         → Reset, variáveis CSS, mobile-first base
+      home.css           → Estilos da tela principal
+      calendario.css     → Grid + estilos do calendário
+      ajustar.css        → Formulário de ajuste
 
-  /js
-    supabase.js          → Inicialização e funções do Supabase
-    utils.js             → Lógica de cálculo de ciclo, formatação de datas
-    home.js              → Lógica da tela principal
-    calendario.js        → Renderização do calendário
-    ajustar.js           → Formulário de ajuste
+    /js
+      supabase.js        → Inicialização e funções do Supabase
+      utils.js           → Lógica de cálculo de ciclo, formatação de datas
+      home.js            → Lógica da tela principal
+      calendario.js      → Renderização do calendário
+      ajustar.js         → Formulário de ajuste
 
-  /img
-    gotinha-sim.svg      → Ícone gotinha feliz (azul)
-    gotinha-nao.svg      → Ícone gotinha triste (cinza)
+    /img
+      gotinha-sim.svg    → Ícone gotinha feliz (azul)
+      gotinha-nao.svg    → Ícone gotinha triste (cinza)
 
   .gitignore
+  netlify.toml
   README.md
 ```
 

@@ -36,7 +36,7 @@ async function registrarStatusHoje(status) {
     botoes.forEach(btn => btn.classList.add('btn-loading'));
 
     const hoje = window.utils.obterDataHoje();
-    const sucesso = await window.gotinha.salvarStatus(hoje, status);
+    const sucesso = await window.aguaHoje.salvarStatus(hoje, status);
 
     if (sucesso) {
       mostrarSucesso(feedbackContainer, status);
@@ -64,7 +64,7 @@ async function carregarHistorico() {
   const container = document.getElementById('historicoLista');
 
   try {
-    const historico = await window.gotinha.buscarHistorico(5);
+    const historico = await window.aguaHoje.buscarHistorico(5);
 
     if (historico.length === 0) {
       container.innerHTML = `
