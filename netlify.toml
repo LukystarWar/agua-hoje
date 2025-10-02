@@ -1,7 +1,3 @@
-[build]
-  command = "echo \"window.SUPABASE_CONFIG = { url: '${SUPABASE_URL}', key: '${SUPABASE_ANON_KEY}' };\" > assets/js/config.js"
-  publish = "."
-
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -2,9 +2,6 @@
 .env
 .env.local
 
-# Config local (gerado no build ou manualmente)
-assets/js/config.js
-
 # OS
 .DS_Store
 Thumbs.db
