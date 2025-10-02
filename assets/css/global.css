@@ -161,14 +161,14 @@ p {
 }
 
 .btn-outline {
-  background: transparent;
-  color: var(--branco);
-  border: 2px solid var(--branco);
+  background: var(--branco);
+  color: var(--azul-principal);
+  border: 2px solid var(--azul-principal);
 }
 
 .btn-outline:hover {
-  background: var(--branco);
-  color: var(--azul-principal);
+  background: var(--azul-principal);
+  color: var(--branco);
 }
 
 .btn-lg {
@@ -259,16 +259,22 @@ p {
    HEADER GLOBAL
    =========================== */
 .app-header {
-  text-align: center;
-  padding: var(--spacing-md) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
   background: var(--azul-principal);
 }
 
-.app-header h1 {
-  color: var(--branco);
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  margin: 0;
-  font-weight: 700;
+.app-header-logo {
+  height: 60px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .app-header-logo {
+    height: 70px;
+  }
 }
 
 /* ===========================

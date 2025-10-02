@@ -3,19 +3,28 @@
    =========================== */
 
 .home-wrapper {
-  min-height: 100vh;
+  min-height: calc(100vh - 92px); /* Subtrai altura do header */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: var(--spacing-md);
   background: var(--branco);
 }
 
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 /* Status principal (SIM/NÃO/PAUSA) */
 .status-principal {
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .status-texto {
@@ -60,15 +69,15 @@
 
 /* Ícone da gotinha */
 .icone-gotinha {
-  width: 200px;
+  width: 150px;
   height: auto;
-  margin: 0 auto var(--spacing-lg);
+  margin: 0 auto var(--spacing-md);
   display: block;
 }
 
 @media (min-width: 768px) {
   .icone-gotinha {
-    width: 300px;
+    width: 200px;
   }
 }
 
@@ -77,16 +86,17 @@
   background: var(--cinza-claro);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   box-shadow: var(--shadow-sm);
   max-width: 400px;
   width: 100%;
+  text-align: center;
 }
 
 .proximo-fornecimento h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--texto);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
 }
 
 .proximo-fornecimento p {
@@ -101,20 +111,18 @@
   font-size: 1.125rem;
 }
 
-/* Botões de navegação */
+/* Botões de navegação - Footer fixo */
 .nav-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: var(--spacing-sm);
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+  padding: var(--spacing-sm) 0;
 }
 
-@media (min-width: 768px) {
-  .nav-buttons {
-    flex-direction: row;
-    gap: var(--spacing-md);
-  }
+.nav-buttons .btn {
+  flex: 1;
 }
 
 /* Loading state */

@@ -51,33 +51,35 @@ function renderizarStatus(container, info) {
   else if (status === 'PAUSA') iconeSrc = 'assets/img/manutencao.png';
 
   container.innerHTML = `
-    <div class="status-principal fade-in">
-      <img
-        src="${iconeSrc}"
-        alt="Status ${status}"
-        class="icone-gotinha pulse"
-        onerror="this.style.display='none'"
-      />
+    <div class="home-content fade-in">
+      <div class="status-principal">
+        <img
+          src="${iconeSrc}"
+          alt="Status ${status}"
+          class="icone-gotinha pulse"
+          onerror="this.style.display='none'"
+        />
 
-      <h1 class="status-texto ${statusClass}">${status}</h1>
+        <h1 class="status-texto ${statusClass}">${status}</h1>
 
-      <div class="data-atual">
-        ${dataLegivel}
+        <div class="data-atual">
+          ${dataLegivel}
+        </div>
       </div>
+
+      ${status !== 'SIM' ? `
+        <div class="proximo-fornecimento">
+          <h3>Próximo fornecimento:</h3>
+          <p class="data-proxima">${proxima}</p>
+        </div>
+      ` : ''}
     </div>
 
-    ${status !== 'SIM' ? `
-      <div class="proximo-fornecimento fade-in">
-        <h3>Próximo fornecimento:</h3>
-        <p class="data-proxima">${proxima}</p>
-      </div>
-    ` : ''}
-
     <div class="nav-buttons fade-in">
-      <a href="calendario.html" class="btn btn-outline btn-lg btn-block">
+      <a href="calendario.html" class="btn btn-primary btn-lg">
         Ver Calendário
       </a>
-      <a href="ajustar.html" class="btn btn-primary btn-lg btn-block">
+      <a href="ajustar.html" class="btn btn-outline btn-lg">
         Ajustar Ciclo
       </a>
     </div>
