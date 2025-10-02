@@ -3,7 +3,7 @@
    =========================== */
 
 .home-wrapper {
-  min-height: calc(100vh - 92px); /* Subtrai altura do header */
+  min-height: calc(100vh - 100px); /* Subtrai altura do header (80px logo + 20px padding) */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

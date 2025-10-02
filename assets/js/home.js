@@ -50,17 +50,20 @@ function renderizarStatus(container, info) {
   else if (status === 'NAO') iconeSrc = 'assets/img/nao.png';
   else if (status === 'PAUSA') iconeSrc = 'assets/img/manutencao.png';
 
+  // Exibir com acento
+  const statusTexto = status === 'NAO' ? 'NÃO' : status;
+
   container.innerHTML = `
     <div class="home-content fade-in">
       <div class="status-principal">
         <img
           src="${iconeSrc}"
-          alt="Status ${status}"
+          alt="Status ${statusTexto}"
           class="icone-gotinha pulse"
           onerror="this.style.display='none'"
         />
 
-        <h1 class="status-texto ${statusClass}">${status}</h1>
+        <h1 class="status-texto ${statusClass}">${statusTexto}</h1>
 
         <div class="data-atual">
           ${dataLegivel}

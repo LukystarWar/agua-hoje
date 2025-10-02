@@ -262,19 +262,13 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-md);
+  padding: 10px;
   background: var(--azul-principal);
 }
 
 .app-header-logo {
-  height: 60px;
+  height: 80px;
   width: auto;
-}
-
-@media (min-width: 768px) {
-  .app-header-logo {
-    height: 70px;
-  }
 }
 
 /* ===========================
