@@ -2,11 +2,16 @@
 // CONFIGURAÇÃO SUPABASE
 // ===========================
 
-// NOTA: Estas chaves são públicas (anon key) e seguras para frontend
-// O Supabase usa RLS (Row Level Security) para proteger os dados
-// Substitua pelos valores do seu projeto em: Project Settings > API
-const SUPABASE_URL = 'YOUR_SUPABASE_URL_HERE';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY_HERE';
+// Configuração será injetada via config.js (gerado no build)
+// Para desenvolvimento local, crie um arquivo assets/js/config.js com:
+// window.SUPABASE_CONFIG = { url: 'sua-url', key: 'sua-key' };
+
+const SUPABASE_URL = window.SUPABASE_CONFIG?.url || '';
+const SUPABASE_ANON_KEY = window.SUPABASE_CONFIG?.key || '';
+
+if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+  console.error('❌ Configuração do Supabase não encontrada! Crie assets/js/config.js');
+}
 
 // Inicializar cliente Supabase
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);

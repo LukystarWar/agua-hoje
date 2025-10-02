@@ -1,5 +1,5 @@
 [build]
-  command = "sed -i.bak \"s|YOUR_SUPABASE_URL_HERE|${SUPABASE_URL}|g\" assets/js/supabase.js && sed -i.bak \"s|YOUR_SUPABASE_ANON_KEY_HERE|${SUPABASE_ANON_KEY}|g\" assets/js/supabase.js"
+  command = "echo \"window.SUPABASE_CONFIG = { url: '${SUPABASE_URL}', key: '${SUPABASE_ANON_KEY}' };\" > assets/js/config.js"
   publish = "."
 
 [[redirects]]
