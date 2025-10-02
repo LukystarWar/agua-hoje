@@ -2,10 +2,11 @@
 // CONFIGURAÇÃO SUPABASE
 // ===========================
 
-// IMPORTANTE: Substituir com suas credenciais do Supabase
-// Para produção, usar variáveis de ambiente no Netlify
-const SUPABASE_URL = 'https://kfoiorczgjnngnymzhqz.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtmb2lvcmN6Z2pubmdueW16aHF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0NDAwMzYsImV4cCI6MjA3NTAxNjAzNn0.cNe_3myVQ9mRxGkZWB1_r_hBpml1Q8YV0PNprdq37Kk';
+// NOTA: Estas chaves são públicas (anon key) e seguras para frontend
+// O Supabase usa RLS (Row Level Security) para proteger os dados
+// Substitua pelos valores do seu projeto em: Project Settings > API
+const SUPABASE_URL = 'YOUR_SUPABASE_URL_HERE';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY_HERE';
 
 // Inicializar cliente Supabase
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
