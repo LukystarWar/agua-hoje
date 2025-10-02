@@ -1,3 +1,7 @@
+[build]
+  command = "sed -i.bak \"s|YOUR_SUPABASE_URL_HERE|${SUPABASE_URL}|g\" assets/js/supabase.js && sed -i.bak \"s|YOUR_SUPABASE_ANON_KEY_HERE|${SUPABASE_ANON_KEY}|g\" assets/js/supabase.js"
+  publish = "."
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
