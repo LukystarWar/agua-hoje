@@ -1,0 +1,17 @@
+{
+  "name": "Água Hoje?",
+  "short_name": "Água Hoje",
+  "description": "Saiba se hoje é dia de fornecimento de água",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0069d9",
+  "icons": [
+    {
+      "src": "assets/img/sim.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
