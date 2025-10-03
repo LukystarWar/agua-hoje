@@ -8,10 +8,10 @@
   "theme_color": "#0069d9",
   "icons": [
     {
-      "src": "assets/img/sim.png",
-      "sizes": "any",
+      "src": "assets/img/logo.png",
+      "sizes": "706x591",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
